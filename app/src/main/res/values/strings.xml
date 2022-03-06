@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WeatherAppNative</string>
+
+    <!--CardView-->
+    <string name="favorite_description_card">Favorite City</string>
+    <string name="delete_description_card">Delete City</string>
+    <string name="description_icon_weather">Icon Weather</string>
+
+    <!--TextField-->
+    <string name="hint_text_field">Enter the name of the city </string>
+</resources>
