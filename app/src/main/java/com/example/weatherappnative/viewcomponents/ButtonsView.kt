@@ -6,6 +6,7 @@ import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.vector.ImageVector
 
 @Composable
 fun SimpleBtn(btnName: String, event: () -> Unit) {
@@ -18,7 +19,7 @@ fun SimpleBtn(btnName: String, event: () -> Unit) {
 
 @Composable
 fun FloatBtn(
-    fabIcon: ImageBitmap,
+    fabIcon: ImageVector,
     contentDescription: String = "FloatActionButton",
     event: () -> Unit
 ) {
@@ -26,7 +27,7 @@ fun FloatBtn(
         onClick = event
     ) {
         Icon(
-            bitmap = fabIcon,
+            imageVector = fabIcon,
             contentDescription = contentDescription
         )
     }

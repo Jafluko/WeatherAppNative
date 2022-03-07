@@ -12,6 +12,8 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.weatherappnative.R
 
@@ -26,26 +28,26 @@ fun CityCardView(
     deleteEvent: () -> Unit
 ) {
     Card(
-        elevation = R.dimen.elevation_card.dp,
-        modifier = Modifier.padding(R.dimen.padding_card.dp)
+        elevation = dimensionResource(R.dimen.elevation_card),
+        modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_card))
     ) {
         Column {
-            Row() {
+            Row {
                 Text(text = cityName)
                 Text(text = temperatureValue)
             }
             Divider()
-            Row() {
+            Row {
                 IconButton(onClick = favouritesEvent) {
                     Icon(
                         imageVector = Icons.Filled.Favorite,
-                        contentDescription = R.string.favorite_description_card.toString()
+                        contentDescription = stringResource(R.string.favorite_description_card)
                     )
                 }
-                IconButton(onClick = favouritesEvent) {
+                IconButton(onClick = deleteEvent) {
                     Icon(
                         imageVector = Icons.Filled.Delete,
-                        contentDescription = R.string.delete_description_card.toString()
+                        contentDescription = stringResource(R.string.delete_description_card)
                     )
                 }
             }
