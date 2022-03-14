@@ -5,6 +5,8 @@
     <!--MainActivity-->
     <string name="title_main_activity">Weather in Cities</string>
     <string name="description_fab">FAB for transition on CitySearchActivity</string>
+    <!--CitySearchActivity-->
+    <string name="name_btn_search">Добавить</string>
     <!--CardView-->
     <string name="favorite_description_card">Favorite City</string>
     <string name="delete_description_card">Delete City</string>

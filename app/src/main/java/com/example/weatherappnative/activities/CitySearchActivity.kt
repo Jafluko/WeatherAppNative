@@ -10,8 +10,11 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.TextFieldValue
+import com.example.weatherappnative.R
 import com.example.weatherappnative.ui.theme.WeatherAppNativeTheme
+import com.example.weatherappnative.viewcomponents.SimpleBtn
 
 class CitySearchActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +26,9 @@ class CitySearchActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     FieldSearchCity(hintValue = "eeeee", changeEvent = {})
+                    SimpleBtn(btnName = stringResource(id = R.string.name_btn_search)) {
+
+                    }
                 }
             }
         }
